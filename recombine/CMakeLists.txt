@@ -98,8 +98,6 @@ else()
 #    set(BLA_VENDOR ATLAS)
     set(CMAKE_REQUIRED_FLAGS "-lm")
 
-    enable_language(Fortran)
-
 
     message(STATUS  "BLA_VENDOR ${BLA_VENDOR}")
     find_package(LAPACK REQUIRED)
