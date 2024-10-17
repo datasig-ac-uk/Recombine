@@ -51,14 +51,14 @@ and for 32 bit simply don't define MKL_ILP64 and change mkl_intel_ilp64.lib to m
 //  -I"%MKLROOT%"/include
 
 #ifdef MKL_ILP64
-#pragma comment(lib, "mkl_intel_ilp64.lib")
+//#pragma comment(lib, "mkl_intel_ilp64.lib")
 typedef ptrdiff_t integer;
 #else
 #ifdef _WIN64
-#pragma comment(lib, "mkl_intel_lp64.lib")
+//#pragma comment(lib, "mkl_intel_lp64.lib")
 typedef int integer;
 #else
-#pragma comment(lib, "mkl_intel_c.lib")
+//#pragma comment(lib, "mkl_intel_c.lib")
 typedef ptrdiff_t integer;
 #endif
 #endif
@@ -67,11 +67,11 @@ typedef ptrdiff_t integer;
 typedef ptrdiff_t integer;
 #endif
 
-#pragma comment(lib, "mkl_core.lib")// always
-//#pragma comment(lib, "mkl_sequential.lib")     // if single-threaded
-#pragma comment(lib, "mkl_intel_thread.lib")// if multi-threaded
-#pragma comment(lib, "libiomp5md.lib")      // if multithreaded and using microsoft compiler
-//#pragma comment(lib, "libmmdd.lib") // Intel Math Library for dynamic runtime
+//#pragma comment(lib, "mkl_core.lib")// always
+////#pragma comment(lib, "mkl_sequential.lib")     // if single-threaded
+//#pragma comment(lib, "mkl_intel_thread.lib")// if multi-threaded
+//#pragma comment(lib, "libiomp5md.lib")      // if multithreaded and using microsoft compiler
+////#pragma comment(lib, "libmmdd.lib") // Intel Math Library for dynamic runtime
 typedef double doublereal;
 #ifndef __APPLE__
 
@@ -96,13 +96,13 @@ typedef std::vector<integer> iVECTOR;
 
 #else
 
-#pragma comment(lib, "liblapack.a")
-#pragma comment(lib, "libf77blas.a")
-#pragma comment(lib, "libcblas.a")
-#pragma comment(lib, "libatlas.a")
+//#pragma comment(lib, "liblapack.a")
+//#pragma comment(lib, "libf77blas.a")
+//#pragma comment(lib, "libcblas.a")
+//#pragma comment(lib, "libatlas.a")
 
-#pragma comment(lib, "libg2c.a")
-#pragma comment(lib, "libgcc.a")
+//#pragma comment(lib, "libg2c.a")
+//#pragma comment(lib, "libgcc.a")
 
 typedef double doublereal;
 typedef ptrdiff_t integer;
@@ -150,14 +150,14 @@ extern "C" void dgemm_(char* transa, char* transb, integer* m, integer* n, integ
 //#endif
 //#endif
 //#ifdef MKL_ILP64
-//#pragma comment (lib, "mkl_intel_ilp64.lib")
+////#pragma comment (lib, "mkl_intel_ilp64.lib")
 //typedef ptrdiff_t integer;
 //#else
 //#ifdef _WIN64
-//#pragma comment (lib, "mkl_intel_lp64.lib")
+////#pragma comment (lib, "mkl_intel_lp64.lib")
 //typedef int integer;
 //#else
-//#pragma comment (lib, "mkl_intel_c.lib")
+////#pragma comment (lib, "mkl_intel_c.lib")
 //typedef ptrdiff_t integer;
 //#endif
 //#endif
