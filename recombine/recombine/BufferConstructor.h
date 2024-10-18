@@ -25,7 +25,7 @@ struct CConditionedBufferHelper {
     void* pvCConditioning;
 };
 
-typedef CConditionedBufferHelper CBufferHelper;
+typedef struct CConditionedBufferHelper CBufferHelper;
 
 // an example of a conditioning that might be used in a given callback function
 //struct CConditioning
