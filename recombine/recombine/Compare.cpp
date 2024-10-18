@@ -31,7 +31,7 @@ index_integer InsertLeafData(sRecombineInterface& data, std::valarray<doublereal
 }
 };// namespace compare
 
-doublereal RECOMBINE_API Compare(void* pData)
+doublereal Compare(void* pData)
 {
     // unpack the void pointer
     sRecombineInterface& data = *(sRecombineInterface*)pData;
