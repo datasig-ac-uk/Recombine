@@ -12,14 +12,10 @@
 typedef double SCA;
 typedef SCA* PSCA;
 
-#ifdef __cplusplus
-extern "C"
-{
-#endif
+
 //prodsswitch prodmethod = prodsswitch::Prods;
 //prodsswitch prodmethod = prodsswitch::Prods_wei1;
 prodsswitch prodmethod = prodsswitch::Prods_cheb;
-}
 
 
 namespace 
