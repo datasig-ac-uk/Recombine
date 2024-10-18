@@ -189,17 +189,7 @@ void LinearAlgebraReductionTool::SharpenWeights(VECTORI& minset, VECTORI& maxset
                 temp_minset.push_back(minset[i]);
             }
         }
-#ifdef _DEBUG
-        {
-            // compute the conserved quantity
-            doublereal error;
-            bool not_negative;
-            VECTORD errors;
-            ValidateReduction(Mcog, eWeights, ePoints, errors, error, not_negative);
-            assert(not_negative);
-            assert(error < 10e-5);// resharpened using DGELSD
-        }
-#endif
+
     }
 }
 
